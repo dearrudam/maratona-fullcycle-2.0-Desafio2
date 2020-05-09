@@ -71,6 +71,9 @@ $ npm install
 ## Executando o projeto
 
 ```bash
+# executar as migrations para recriar caso não exista, o banco de dados e as tabelas
+$ npm run typeorm migration:run
+
 # development mode
 $ npm run start
 
