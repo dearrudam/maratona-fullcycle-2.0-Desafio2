@@ -1,5 +1,5 @@
 tasks:
-  - init: npm install && npm run build
+  - init: npm install && npm run build && npm run typeorm migration:run
     command: npm run start:dev
 ports:
   - port: 3000
