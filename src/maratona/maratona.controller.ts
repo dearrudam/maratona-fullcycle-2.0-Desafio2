@@ -27,7 +27,7 @@ export class MaratonaController {
 
     @Post()
     async store(@Req() request: Request) {
-        Logger.log(`armazenando uma nova maratona`, MaratonaController.name);
+        Logger.log(`armazenando uma nova maratona : ${(request.body as any)}`, MaratonaController.name);
         const maratona = this.maratonaRepository.create(request.body as any);
         await this.maratonaRepository.save(maratona);
         return maratona;
